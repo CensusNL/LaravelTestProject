@@ -1,6 +1,6 @@
 # Laravel test project
 
-A simple test project for testing some Laravel functionality. 
+A simple test project for testing some Laravel functionality. Commit your code to a new/existing branch with your username. Committed code in review will be downloaded by Census and deleted from Github.
 
 ## Development
 
