@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Exports\UserExport;
+use App\Imports\UserImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
 {
@@ -24,5 +27,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function up(){
+
+      //  dd(request()->file('file'));
+
+        Excel::import(new UserImport,request()->file('file'));
+
+        return back()->with('status','Uploaded successfully');
     }
 }
