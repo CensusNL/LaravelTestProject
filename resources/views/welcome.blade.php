@@ -4,9 +4,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                @if($errors->any())
+                    <div class="alert alert-danger" role="alert">{{ $errors->first() }}</div>
+                @endif
+            </div>
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">Dashboard</div>
-
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -14,16 +18,15 @@
                             </div>
                         @endif
 
-                        <form method="POST" action="/profile">
+                        <form method="POST" action={{ route('home.index') }} enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group">
                                 <label for="file">File:</label>
-                                <input class="form-control-file" type="file" id="file" accept=".xlsx, .xls, .csv" />
+                                <input class="form-control-file" type="file" name="file" id="file" accept=".xlsx, .xls, .csv" />
                                 <small id="emailHelp" class="form-text text-muted">Upload your excel file here.</small>
                             </div>
                             <button type="submit" class="btn btn-primary">Import users</button>
-
                         </form>
                     </div>
                 </div>

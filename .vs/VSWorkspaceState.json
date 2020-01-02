@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Exceptions",
+    "\\app\\Exports",
+    "\\app\\Http",
+    "\\app\\Http\\Controllers",
+    "\\app\\Imports",
+    "\\app\\Jobs",
+    "\\app\\Providers",
+    "\\bootstrap"
+  ],
+  "SelectedNode": "\\app\\Imports\\UserImport.php",
+  "PreviewInSolutionExplorer": false
+}
